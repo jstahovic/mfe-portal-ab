@@ -1,13 +1,15 @@
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import { NgModule } from '@angular/core'
-
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
+import { MfeAComponent } from './mfe-a/mfe-a.component'
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MfeAComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [MfeAComponent],
 })
 export class AppModule {}
